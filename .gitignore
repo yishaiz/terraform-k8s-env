@@ -1,0 +1,7 @@
+.terraform
+.terraform/
+*.pem
+terraform.tfstate*
+k8s_linuxacademy_project_keypair.pem
+.terraform*
+.terraform.tfstate.lock.info
