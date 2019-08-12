@@ -17,7 +17,7 @@ resource "aws_instance" "machine_k8s_master" {
   subnet_id     = aws_subnet.subnet-pub-1.id
 
   # private_ip    = var.k8s_master_private_ip_address  # "192.168.10.40"
-  # key_name = aws_key_pair.k8s_linuxacadmy_tf_project_key.key_name
+  key_name = aws_key_pair.k8s_linuxacademy_tf_project_key.key_name
 
   security_groups = [
     aws_security_group.k8s-linuxacademy-terraform-project-sg.id
@@ -43,7 +43,7 @@ resource "aws_instance" "machine_minion_1" {
 
   source_dest_check = false 
 
-  key_name = aws_key_pair.k8s_linuxacadmy_tf_project_key.key_name
+  key_name = aws_key_pair.k8s_linuxacademy_tf_project_key.key_name
 
   # iam_instance_profile   = "${aws_iam_instance_profile.consul-join.name}"
 
@@ -72,7 +72,7 @@ resource "aws_instance" "machine_minion_2" {
   
   source_dest_check = false
   
-  key_name = aws_key_pair.k8s_linuxacadmy_tf_project_key.key_name
+  key_name = aws_key_pair.k8s_linuxacademy_tf_project_key.key_name
 
   # iam_instance_profile   = "${aws_iam_instance_profile.consul-join.name}"
 

@@ -42,12 +42,12 @@ variable "ig-route" {
 
 variable "keypair_name" {
   description = "name of ssh key to attach to hosts genereted during apply"
-  default     = "k8s_linuxacademy_project_keypair"
+  default     = "k8s_linuxacademy_tf_project_keypair"
 }
 
 variable "pem_key_name" {
   description = "name of ssh key to attach to hosts genereted during apply"
-  default     = "k8s_linuxacademy_project_keypair.pem"
+  default     = "k8s_linuxacademy_tf_project_keypair.pem"
 }
 
 # variable "bastion_host_private_ip_address" {

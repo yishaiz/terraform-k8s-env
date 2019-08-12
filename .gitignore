@@ -2,6 +2,6 @@
 .terraform/
 *.pem
 terraform.tfstate*
-k8s_linuxacademy_project_keypair.pem
+k8s_linuxacademy_tf_project_keypair.pem
 .terraform*
 .terraform.tfstate.lock.info
