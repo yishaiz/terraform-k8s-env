@@ -29,7 +29,7 @@ resource "aws_instance" "machine_k8s_master" {
     Name = "k8s-linuxacademy-terraform-master"
   }
 
-  # user_data = file("provisions/install-k8s-master.sh")
+  user_data = file("provisions/install-k8s-master.sh")
 }
 
 
@@ -45,8 +45,6 @@ resource "aws_instance" "machine_minion_1" {
 
   key_name = aws_key_pair.k8s_linuxacademy_tf_project_key.key_name
 
-  # iam_instance_profile   = "${aws_iam_instance_profile.consul-join.name}"
-
   security_groups = [
     aws_security_group.k8s-linuxacademy-terraform-project-sg.id
   ]
@@ -57,7 +55,7 @@ resource "aws_instance" "machine_minion_1" {
     Name = "k8s-linuxacademy-terraform-minion-1"
   }
 
-  # user_data = file("provisions/install-consul-client.sh")
+  user_data = file("provisions/install-k8s-minion.sh")
 }
 
 
@@ -86,7 +84,7 @@ resource "aws_instance" "machine_minion_2" {
     Name = "k8s-linuxacademy-terraform-minion-2"
   }
 
-  # user_data = file("provisions/install-consul-client2.sh")
+  user_data = file("provisions/install-k8s-minion.sh")
 }
 
 

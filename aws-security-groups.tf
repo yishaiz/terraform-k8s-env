@@ -41,15 +41,7 @@ resource "aws_security_group" "k8s-linuxacademy-terraform-project-sg" {
   }
 
  
-
-  # ingress {
-  #   from_port   = 3306
-  #   to_port     = 3306
-  #   protocol    = "TCP"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  #   description = "DB"
-  # }
-
+ 
 
   ingress {
     from_port   = -1
@@ -66,40 +58,7 @@ resource "aws_security_group" "k8s-linuxacademy-terraform-project-sg" {
     cidr_blocks = ["0.0.0.0/0"]
     description = "http"
   }
-
-  # ingress {
-  #   from_port   = 9090
-  #   to_port     = 9090
-  #   protocol    = "TCP"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  #   description = "prometheus UI"
-  # }
-
-  # ingress {
-  #     from_port   = 9100
-  #     to_port     = 9100
-  #     protocol    = "TCP"
-  #     cidr_blocks = ["0.0.0.0/0"]
-  #     description = "prometheus Node exporter"
-  # }
-
-
-  # ingress {
-  #   from_port   = 3000
-  #   to_port     = 3000
-  #   protocol    = "tcp"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  #   description = "grafana"
-  # }
-
-  # ingress {
-  #   from_port   = 179
-  #   to_port     = 179
-  #   protocol    = "tcp"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  #   description = "tcp-179"
-  # }
-
+ 
 
   ingress {
     from_port   = -1
@@ -119,31 +78,7 @@ resource "aws_security_group" "k8s-linuxacademy-terraform-project-sg" {
     description = "all"
   }
 
-
-  # ingress {
-  #   from_port   = 8500
-  #   to_port     = 8500
-  #   protocol    = "tcp"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  #   description = "consul"
-  # }
-
-
-  # ingress {
-  #   from_port   = 8300
-  #   to_port     = 8300
-  #   protocol    = "tcp"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  #   description = "consul"
-  # }
-
-  # ingress {
-  #   from_port   = 8301
-  #   to_port     = 8301
-  #   protocol    = "tcp"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  #   description = "consul"
-  # }
+ 
 
   tags = {
     Name = "k8s-linuxacademy-terraform-Security-Group"
