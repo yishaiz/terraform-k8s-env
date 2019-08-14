@@ -48,9 +48,6 @@ resource "aws_security_group" "k8s-linuxacademy-terraform-project-sg" {
     description = "kubectl"
   }
 
- 
- 
-
   ingress {
     from_port   = -1
     to_port     = -1
@@ -76,8 +73,6 @@ resource "aws_security_group" "k8s-linuxacademy-terraform-project-sg" {
     description = "ip-np-4"
   }
 
- 
-
   egress {
     from_port   = 0
     to_port     = 0
@@ -85,8 +80,6 @@ resource "aws_security_group" "k8s-linuxacademy-terraform-project-sg" {
     cidr_blocks = ["0.0.0.0/0"]
     description = "all"
   }
-
- 
 
   tags = {
     Name = "k8s-linuxacademy-terraform-Security-Group"

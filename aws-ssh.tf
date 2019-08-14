@@ -10,7 +10,6 @@ resource "aws_key_pair" "k8s_linuxacademy_tf_project_key" {
   public_key = "${tls_private_key.k8s_linuxacademy_tf_project_rsa_key.public_key_openssh}"
 }
 
-
 resource "null_resource" "chmod_400_key" {
   provisioner "local-exec" {
     command = "chmod 400 ${path.module}/${local_file.private_key.filename}"
