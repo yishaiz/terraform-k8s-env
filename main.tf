@@ -7,7 +7,7 @@ resource "aws_instance" "machine_k8s_master" {
   ami = "ami-024a64a6685d05041"
   instance_type="t2.medium" 
   
-  subnet_id     = aws_subnet.subnet-pub-1.id
+  subnet_id = aws_subnet.subnet-pub-1.id
 
   key_name = aws_key_pair.k8s_linuxacademy_tf_project_key.key_name
 
@@ -29,7 +29,7 @@ resource "aws_instance" "machine_k8s_master" {
 resource "aws_instance" "machine_minion_1" {
   ami           = "ami-0a313d6098716f372"
   instance_type = "t2.micro"
-  subnet_id     = aws_subnet.subnet-pub-1.id
+  subnet_id = aws_subnet.subnet-pub-1.id
 
   source_dest_check = false 
 
@@ -54,7 +54,7 @@ resource "aws_instance" "machine_minion_2" {
   ami = "ami-0a313d6098716f372"
 
   instance_type = "t2.micro"
-  subnet_id     = aws_subnet.subnet-pub-1.id
+  subnet_id = aws_subnet.subnet-pub-1.id
 
   source_dest_check = false
   
